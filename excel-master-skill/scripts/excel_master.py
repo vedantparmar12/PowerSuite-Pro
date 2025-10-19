@@ -506,18 +506,18 @@ def main():
         result_path = excel_master.create_spreadsheet(prompt, output_file)
         analysis = excel_master.analyze_request(prompt)
         
-        print(f"✅ Excel spreadsheet created: {result_path}")
-        print(f"📊 Spreadsheet type: {analysis['type']}")
-        print(f"🎯 Complexity level: {analysis['complexity']}")
-        print(f"🎨 Applied {analysis['color_scheme']} styling")
+        print(f"Excel spreadsheet created: {result_path}")
+        print(f"Spreadsheet type: {analysis['type']}")
+        print(f"Complexity level: {analysis['complexity']}")
+        print(f"Applied {analysis['color_scheme']} styling")
         
         if analysis['is_update']:
-            print("🔄 Updated existing spreadsheet")
+            print("Updated existing spreadsheet")
         else:
-            print("🆕 Created new spreadsheet")
+            print("Created new spreadsheet")
             
     except Exception as e:
-        print(f"❌ Error creating spreadsheet: {str(e)}")
+        print(f" Error creating spreadsheet: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
