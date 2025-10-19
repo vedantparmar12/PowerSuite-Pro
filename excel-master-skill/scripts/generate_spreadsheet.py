@@ -29,11 +29,11 @@ def main():
         # Generate spreadsheet
         output_path = excel_master.create_spreadsheet(prompt, output_file)
         
-        print(f"✅ Spreadsheet created successfully: {output_path}")
+        print(f" Spreadsheet created successfully: {output_path}")
         return output_path
         
     except Exception as e:
-        print(f"❌ Error creating spreadsheet: {str(e)}")
+        print(f"Error creating spreadsheet: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
