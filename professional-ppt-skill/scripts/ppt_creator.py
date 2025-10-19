@@ -334,16 +334,16 @@ def main():
     
     try:
         result_path = creator.generate_presentation(prompt, output_file)
-        print(f"✅ Professional presentation created: {result_path}")
+        print(f"Professional presentation created: {result_path}")
         
         # Output metadata for Claude
         analysis = creator.analyze_prompt(prompt)
-        print(f"📊 Generated {analysis['slide_count']} slides for {analysis['audience']} audience")
-        print(f"🎨 Applied {analysis['color_scheme']} color scheme")
-        print(f"📋 Presentation type: {analysis['type']}")
+        print(f" Generated {analysis['slide_count']} slides for {analysis['audience']} audience")
+        print(f"Applied {analysis['color_scheme']} color scheme")
+        print(f"Presentation type: {analysis['type']}")
         
     except Exception as e:
-        print(f"❌ Error creating presentation: {str(e)}")
+        print(f" Error creating presentation: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
