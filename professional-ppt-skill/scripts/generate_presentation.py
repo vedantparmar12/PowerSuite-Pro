@@ -29,11 +29,11 @@ def main():
         # Generate presentation
         output_path = creator.generate_presentation(prompt, output_file)
         
-        print(f"✅ Presentation created successfully: {output_path}")
+        print(f"Presentation created successfully: {output_path}")
         return output_path
         
     except Exception as e:
-        print(f"❌ Error creating presentation: {str(e)}")
+        print(f"Error creating presentation: {str(e)}")
         sys.exit(1)
 
 if __name__ == "__main__":
