@@ -1,0 +1,73 @@
+name: Web Intelligence & Content Analyzer
+description: Advanced web content analysis, competitive research, market intelligence, and automated report generation from web sources. Use for research, competitive analysis, market research, or web data extraction.
+version: 1.0.0
+author: Claude Skills Team
+category: research
+tags:
+  - web-scraping
+  - research
+  - competitive-analysis
+  - market-intelligence
+  - content-analysis
+
+# Skill activation keywords
+triggers:
+  - web-research
+  - competitive-analysis
+  - market-research
+  - web-scraping
+  - content-analysis
+  - competitor
+  - industry-research
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    requests: ">=2.28.0"
+    beautifulsoup4: ">=4.11.0"
+    selenium: ">=4.8.0"
+    nltk: ">=3.8.0"
+    textstat: ">=0.7.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/web_intelligence.py
+    - scripts/content_analyzer.py
+    - scripts/competitor_tracker.py
+    - scripts/report_generator.py
+    - scripts/data_visualizer.py
+
+# Capabilities
+capabilities:
+  - web-scraping
+  - competitive-intelligence
+  - market-research
+  - content-analysis
+  - sentiment-analysis
+  - nlp-processing
+  - automated-reporting
+
+# Integration with other skills
+integrations:
+  - excel-master-skill      # Research data in spreadsheets
+  - professional-ppt-skill  # Research presentations
+  - pdf-master-skill        # Research reports
+  - communication-master-skill  # Outreach based on research
+
+# Ethical & legal compliance
+compliance:
+  respect_robots_txt: true
+  rate_limiting: true
+  gdpr_compliant: true
+  ccpa_compliant: true
+
+# Performance settings
+settings:
+  max_concurrent_requests: 10
+  request_timeout_seconds: 30
+  max_urls_per_session: 100
+  enable_caching: true
+  cache_duration_hours: 24

@@ -1,0 +1,70 @@
+name: PDF Master Processor
+description: Advanced PDF operations including creation, editing, form filling, data extraction, merging, splitting, and report generation. Use when user needs PDF manipulation, document processing, or report creation.
+version: 1.0.0
+author: Claude Skills Team
+category: document-processing
+tags:
+  - pdf
+  - document
+  - extraction
+  - forms
+  - reports
+
+# Skill activation keywords
+triggers:
+  - pdf
+  - document
+  - report
+  - form
+  - extract
+  - merge
+  - split
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    PyPDF2: ">=3.0.0"
+    reportlab: ">=4.0.0"
+    pdfplumber: ">=0.9.0"
+    fpdf2: ">=2.7.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/pdf_master.py
+    - scripts/data_extractor.py
+    - scripts/form_processor.py
+    - scripts/report_generator.py
+
+# Capabilities
+capabilities:
+  - pdf-creation
+  - data-extraction
+  - form-processing
+  - document-merging
+  - watermarking
+  - encryption
+  - ocr-integration
+
+# Integration with other skills
+integrations:
+  - excel-master-skill      # Extract data to Excel
+  - professional-ppt-skill  # Convert presentations to PDF
+  - financial-analytics-skill  # Financial reports
+
+# Security features
+security:
+  encryption_standards:
+    - AES-256
+    - RC4
+  enable_digital_signatures: true
+  enable_redaction: true
+
+# Performance settings
+settings:
+  max_file_size_mb: 500
+  max_pages: 10000
+  enable_compression: true
+  enable_ocr: true

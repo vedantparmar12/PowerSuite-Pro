@@ -1,0 +1,61 @@
+name: Excel Master Controller
+description: Create and manipulate Excel spreadsheets with formulas, charts, and formatting. Use when user needs spreadsheet creation, data analysis, budgets, or Excel automation.
+version: 1.0.0
+author: Claude Skills Team
+category: productivity
+tags:
+  - excel
+  - spreadsheet
+  - data-analysis
+  - automation
+  - visualization
+
+# Skill activation keywords
+triggers:
+  - excel
+  - spreadsheet
+  - workbook
+  - xlsx
+  - budget
+  - financial-model
+  - chart
+  - pivot-table
+  - formula
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    openpyxl: ">=3.1.0"
+    pandas: ">=1.5.0"
+    xlsxwriter: ">=3.0.0"
+    pillow: ">=9.0.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/excel_master.py
+    - scripts/generate_spreadsheet.py
+
+# Capabilities
+capabilities:
+  - data-organization
+  - formula-generation
+  - chart-creation
+  - conditional-formatting
+  - pivot-tables
+  - data-validation
+
+# Integration with other skills
+integrations:
+  - professional-ppt-skill  # Export data to presentations
+  - pdf-master-skill        # Export to PDF
+  - financial-analytics-skill  # Financial modeling
+
+# Performance settings
+settings:
+  max_file_size_mb: 100
+  max_rows: 1000000
+  max_sheets: 50
+  enable_caching: true

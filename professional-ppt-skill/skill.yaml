@@ -1,0 +1,60 @@
+name: Professional PowerPoint Creator
+description: Create professional presentations from prompts with intelligent content, design, and branding. Use when user requests presentations, PPTs, slides, pitch decks, or business presentations.
+version: 1.0.0
+author: Claude Skills Team
+category: productivity
+tags:
+  - powerpoint
+  - presentation
+  - slides
+  - pitch-deck
+  - business
+
+# Skill activation keywords
+triggers:
+  - powerpoint
+  - presentation
+  - slides
+  - ppt
+  - pptx
+  - pitch-deck
+  - slide-deck
+  - keynote
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    python-pptx: ">=0.6.21"
+    pillow: ">=9.0.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/ppt_creator.py
+    - scripts/generate_presentation.py
+
+# Capabilities
+capabilities:
+  - intelligent-content-generation
+  - professional-design
+  - multiple-templates
+  - automatic-formatting
+  - speaker-notes
+  - chart-integration
+
+# Integration with other skills
+integrations:
+  - excel-master-skill      # Import data from spreadsheets
+  - pdf-master-skill        # Export to PDF
+  - financial-analytics-skill  # Financial presentations
+
+# Performance settings
+settings:
+  max_slides: 100
+  default_template: business
+  enable_animations: true
+  export_formats:
+    - pptx
+    - pdf

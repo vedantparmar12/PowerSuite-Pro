@@ -1,0 +1,74 @@
+name: Financial Analytics & Modeling Engine
+description: Advanced financial modeling, valuation, risk analysis, DCF models, scenario planning, and investment analysis. Use for financial modeling, valuation, investment analysis, or complex financial calculations.
+version: 1.0.0
+author: Claude Skills Team
+category: finance
+tags:
+  - finance
+  - valuation
+  - modeling
+  - investment
+  - analytics
+
+# Skill activation keywords
+triggers:
+  - financial-model
+  - valuation
+  - dcf
+  - lbo
+  - investment-analysis
+  - portfolio
+  - risk-analysis
+  - financial-analytics
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    numpy: ">=1.21.0"
+    pandas: ">=1.5.0"
+    scipy: ">=1.9.0"
+    matplotlib: ">=3.6.0"
+    seaborn: ">=0.12.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/financial_engine.py
+    - scripts/valuation_models.py
+    - scripts/risk_analytics.py
+    - scripts/portfolio_optimizer.py
+    - scripts/data_collector.py
+
+# Capabilities
+capabilities:
+  - dcf-valuation
+  - financial-statement-analysis
+  - portfolio-optimization
+  - risk-management
+  - scenario-modeling
+  - monte-carlo-simulation
+
+# Integration with other skills
+integrations:
+  - excel-master-skill      # Model generation in Excel
+  - professional-ppt-skill  # Investment presentations
+  - pdf-master-skill        # Investment memos
+
+# Compliance standards
+compliance:
+  - GAAP
+  - IFRS
+  - Basel-III
+  - Solvency-II
+
+# Performance settings
+settings:
+  monte_carlo_iterations: 10000
+  max_portfolio_size: 1000
+  enable_real_time_data: true
+  data_sources:
+    - Bloomberg
+    - FactSet
+    - S&P Capital IQ

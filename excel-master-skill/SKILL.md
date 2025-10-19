@@ -1,8 +1,8 @@
 ---
 name: Excel Master Controller
-description: Complete Excel sheet control including data entry, formulas, formatting, charts, pivot tables, and real-time updates. Use when user needs spreadsheet creation, data analysis, or Excel automation.
+description: Create and manipulate Excel spreadsheets with formulas, charts, and formatting. Use when user needs spreadsheet creation, data analysis, budgets, or Excel automation.
 version: 1.0.0
-dependencies: python>=3.8, openpyxl>=3.1.0, pandas>=1.5.0, xlsxwriter>=3.0.0
+dependencies: python>=3.8, openpyxl>=3.1.0, pandas>=1.5.0, xlsxwriter>=3.0.0, pillow>=9.0.0
 ---
 
 # Excel Master Controller

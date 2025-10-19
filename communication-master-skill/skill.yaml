@@ -1,0 +1,67 @@
+name: Communication Master & Email Automation
+description: Professional email generation, communication templates, automated workflows, and intelligent messaging. Use for email campaigns, professional communications, follow-up sequences, or message optimization.
+version: 1.0.0
+author: Claude Skills Team
+category: communication
+tags:
+  - email
+  - communication
+  - automation
+  - templates
+  - marketing
+
+# Skill activation keywords
+triggers:
+  - email
+  - communication
+  - message
+  - campaign
+  - newsletter
+  - follow-up
+  - outreach
+  - automation
+
+# Python dependencies
+dependencies:
+  python: ">=3.8"
+  packages:
+    smtplib: builtin
+    email: builtin
+    jinja2: ">=3.1.0"
+    schedule: ">=1.2.0"
+    textstat: ">=0.7.0"
+
+# File locations
+files:
+  instructions: SKILL.md
+  scripts:
+    - scripts/communication_master.py
+    - scripts/email_generator.py
+    - scripts/workflow_manager.py
+    - scripts/analytics_engine.py
+    - scripts/template_manager.py
+
+# Capabilities
+capabilities:
+  - intelligent-email-generation
+  - workflow-automation
+  - personalization
+  - ab-testing
+  - analytics
+  - multi-channel
+
+# Integration with other skills
+integrations:
+  - excel-master-skill      # Analytics reporting
+  - pdf-master-skill        # Attachment generation
+  - web-intelligence-skill  # Research for outreach
+
+# Performance settings
+settings:
+  max_recipients: 10000
+  rate_limit_per_hour: 100
+  enable_tracking: true
+  compliance:
+    - CAN-SPAM
+    - GDPR
+    - CASL

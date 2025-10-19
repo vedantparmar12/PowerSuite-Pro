@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:support.claude.com)",
+      "Bash(for dir in communication-master-skill excel-master-skill financial-analytics-skill pdf-master-skill professional-ppt-skill web-intelligence-skill)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(ls -la \"$dir/\")",
+      "Bash(done)",
+      "Bash(python -c \"import yaml; yaml.safe_load(open(''excel-master-skill/skill.yaml'')); print(''✓ excel-master-skill/skill.yaml is valid YAML'')\")",
+      "Bash(for skill_dir in communication-master-skill excel-master-skill financial-analytics-skill pdf-master-skill professional-ppt-skill web-intelligence-skill)",
+      "Bash(do echo \"=== $skill_dir ===\")",
+      "Bash(ls -1 \"$skill_dir/\")",
+      "Bash(python -c \"import yaml; yaml.safe_load(open(''excel-master-skill/skill.yaml'')); print(''excel-master-skill/skill.yaml is valid YAML'')\")",
+      "Bash(python -c \"import yaml; yaml.safe_load(open(''professional-ppt-skill/skill.yaml'')); print(''professional-ppt-skill/skill.yaml is valid YAML'')\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "shadcn"
+  ]
+}
