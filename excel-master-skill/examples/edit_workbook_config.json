@@ -1,0 +1,87 @@
+{
+  "edit_file": "existing_workbook.xlsx",
+  "change_theme": "ocean_breeze",
+  "update_sheets": {
+    "Sales_Data": {
+      "cells": {
+        "A1": "Updated Sales Data - Q4 2024",
+        "B15": 50000,
+        "C15": "=B15*1.1"
+      },
+      "range": {
+        "start": "E2",
+        "data": [
+          ["New Column 1", 100],
+          ["New Column 2", 200],
+          ["New Column 3", 300]
+        ]
+      }
+    },
+    "Dashboard": {
+      "cells": {
+        "A1": "Updated Dashboard"
+      }
+    }
+  },
+  "add_sheets": [
+    {
+      "name": "New_Metrics",
+      "type": "data",
+      "headers": ["Metric", "Value", "Target", "Status"],
+      "data": [
+        ["Customer Satisfaction", 4.5, 4.0, "Exceeds"],
+        ["Response Time", 2.3, 3.0, "Exceeds"],
+        ["Resolution Rate", 0.92, 0.85, "Exceeds"],
+        ["NPS Score", 68, 60, "Exceeds"]
+      ],
+      "formats": {
+        "Value": "0.0",
+        "Target": "0.0"
+      },
+      "conditional_formatting": [
+        {
+          "type": "icon_set",
+          "range": "D2:D5",
+          "icon_style": "3Symbols"
+        }
+      ]
+    }
+  ],
+  "add_charts": {
+    "Sales_Data": [
+      {
+        "type": "line",
+        "title": "Sales Trend Analysis",
+        "data_range": "Sales_Data!B2:B20",
+        "categories_range": "Sales_Data!A2:A20",
+        "position": "H2",
+        "x_axis": "Date",
+        "y_axis": "Sales ($)",
+        "width": 15,
+        "height": 10
+      }
+    ],
+    "New_Metrics": [
+      {
+        "type": "bar",
+        "title": "Metrics vs Targets",
+        "data_range": "New_Metrics!B2:C5",
+        "categories_range": "New_Metrics!A2:A5",
+        "position": "F2"
+      }
+    ]
+  },
+  "add_validations": {
+    "New_Metrics": [
+      {
+        "type": "list",
+        "range": "D2:D100",
+        "formula1": "\"Exceeds,Meets,Below\"",
+        "error_title": "Invalid Status",
+        "error_message": "Please select: Exceeds, Meets, or Below"
+      }
+    ]
+  },
+  "delete_sheets": ["Old_Data", "Archive"],
+  "output_path": "updated_workbook.xlsx"
+}

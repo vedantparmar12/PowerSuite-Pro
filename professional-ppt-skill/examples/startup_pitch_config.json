@@ -1,0 +1,105 @@
+{
+  "title": "TechVenture AI",
+  "subtitle": "Revolutionizing Enterprise Automation with AI",
+  "theme": "tech_startup",
+  "global_transition": "fade",
+  "output_path": "TechVenture_Pitch_Deck.pptx",
+  "slides": [
+    {
+      "type": "title",
+      "title": "TechVenture AI",
+      "subtitle": "Revolutionizing Enterprise Automation with AI\nSeed Round • March 2025"
+    },
+    {
+      "type": "content",
+      "title": "The Problem",
+      "bullets": [
+        "80% of enterprise workflows still manual",
+        "Companies waste $1.8M annually on repetitive tasks",
+        "Existing automation tools require coding expertise",
+        "Integration complexity blocks adoption",
+        "ROI takes 12+ months to realize"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Our Solution",
+      "bullets": [
+        "No-code AI automation platform",
+        "Pre-built workflows for 50+ common tasks",
+        "Native integrations with 200+ enterprise tools",
+        "Setup in hours, not months",
+        "Guaranteed ROI in 90 days"
+      ]
+    },
+    {
+      "type": "two_column",
+      "title": "Market Opportunity",
+      "left_content": [
+        "TAM: $68B",
+        "SAM: $12B",
+        "SOM: $850M",
+        "",
+        "Growing 28% CAGR"
+      ],
+      "right_content": [
+        "2M+ target enterprises",
+        "Average deal: $45K/year",
+        "5-year customer LTV: $180K",
+        "",
+        "Massive untapped potential"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Traction",
+      "bullets": [
+        "💰 $2.4M ARR in 18 months",
+        "🚀 127 enterprise customers",
+        "📈 15% MoM growth",
+        "⭐ 4.8/5 customer satisfaction",
+        "🏆 Named 'Best AI Startup 2024' by TechCrunch"
+      ]
+    },
+    {
+      "type": "comparison",
+      "title": "Why We Win",
+      "left_title": "Competitors:\n• Complex setup\n• Requires developers\n• Expensive\n• Slow ROI",
+      "right_title": "TechVenture:\n• No-code setup\n• Business user friendly\n• Affordable\n• Immediate ROI"
+    },
+    {
+      "type": "timeline",
+      "title": "12-Month Roadmap",
+      "events": [
+        "Q2\nAI Models 2.0",
+        "Q3\nMobile App",
+        "Q4\nAPI Platform",
+        "Q1 '26\nEnterprise Suite"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Team",
+      "bullets": [
+        "Sarah Chen, CEO - Ex-Google AI Lead, Stanford PhD",
+        "Michael Rodriguez, CTO - Built automation at Stripe",
+        "Jennifer Lee, CPO - Product Director at Salesforce",
+        "David Kim, Head of Sales - Closed $50M at Oracle",
+        "25 engineers, 8 from FAANG companies"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "The Ask",
+      "bullets": [
+        "Raising: $5M seed round",
+        "Use of funds:",
+        "  • 50% - Engineering & product",
+        "  • 30% - Sales & marketing",
+        "  • 20% - Operations & hiring",
+        "Projected: $15M ARR in 18 months",
+        "Exit potential: $200M+ in 5 years"
+      ]
+    }
+  ]
+}

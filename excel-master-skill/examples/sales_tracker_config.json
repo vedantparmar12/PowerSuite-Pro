@@ -1,0 +1,185 @@
+{
+  "theme": "tech_purple",
+  "output_path": "Sales_Performance_Tracker.xlsx",
+  "sheets": [
+    {
+      "name": "Sales_Data",
+      "type": "data",
+      "headers": ["Date", "Salesperson", "Region", "Product", "Quantity", "Unit_Price", "Total_Sale", "Commission", "Status"],
+      "data": [
+        ["2024-01-15", "Sarah Chen", "West", "Enterprise License", 5, 2500, 12500, 1250, "Closed"],
+        ["2024-01-18", "Michael Brown", "East", "Pro License", 10, 1200, 12000, 1200, "Closed"],
+        ["2024-01-22", "Jennifer Lopez", "South", "Enterprise License", 3, 2500, 7500, 750, "Closed"],
+        ["2024-02-05", "David Kim", "North", "Pro License", 8, 1200, 9600, 960, "Closed"],
+        ["2024-02-10", "Sarah Chen", "West", "Starter License", 15, 500, 7500, 750, "Closed"],
+        ["2024-02-15", "Michael Brown", "East", "Enterprise License", 6, 2500, 15000, 1500, "Closed"],
+        ["2024-02-20", "Jennifer Lopez", "South", "Pro License", 12, 1200, 14400, 1440, "Closed"],
+        ["2024-03-01", "David Kim", "North", "Enterprise License", 4, 2500, 10000, 1000, "Closed"],
+        ["2024-03-08", "Sarah Chen", "West", "Pro License", 9, 1200, 10800, 1080, "Closed"],
+        ["2024-03-15", "Michael Brown", "East", "Enterprise License", 7, 2500, 17500, 1750, "Pending"]
+      ],
+      "formats": {
+        "Date": "yyyy-mm-dd",
+        "Unit_Price": "$#,##0",
+        "Total_Sale": "$#,##0",
+        "Commission": "$#,##0"
+      },
+      "formulas": [
+        {
+          "cell": "G2",
+          "formula": "=E2*F2",
+          "format": "$#,##0"
+        },
+        {
+          "cell": "H2",
+          "formula": "=G2*0.1",
+          "format": "$#,##0"
+        }
+      ],
+      "validations": [
+        {
+          "type": "list",
+          "range": "C2:C100",
+          "formula1": "\"West,East,South,North\"",
+          "error_title": "Invalid Region",
+          "error_message": "Please select a valid region"
+        },
+        {
+          "type": "list",
+          "range": "I2:I100",
+          "formula1": "\"Pending,Closed,Cancelled\"",
+          "error_title": "Invalid Status",
+          "error_message": "Please select: Pending, Closed, or Cancelled"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "type": "data_bar",
+          "range": "G2:G11",
+          "color": "6C5CE7"
+        },
+        {
+          "type": "icon_set",
+          "range": "I2:I11",
+          "icon_style": "3TrafficLights1"
+        }
+      ],
+      "charts": [
+        {
+          "type": "bar",
+          "title": "Sales by Salesperson",
+          "data_range": "Sales_Data!G1:G11",
+          "categories_range": "Sales_Data!B2:B11",
+          "position": "K2",
+          "width": 12,
+          "height": 10
+        }
+      ]
+    },
+    {
+      "name": "Regional_Analysis",
+      "type": "data",
+      "headers": ["Region", "Total_Sales", "Num_Deals", "Avg_Deal_Size", "Market_Share"],
+      "data": [
+        ["West", 30800, 3, 10267, 0.25],
+        ["East", 44500, 3, 14833, 0.36],
+        ["South", 21900, 2, 10950, 0.18],
+        ["North", 19600, 2, 9800, 0.16]
+      ],
+      "formats": {
+        "Total_Sales": "$#,##0",
+        "Avg_Deal_Size": "$#,##0",
+        "Market_Share": "0.0%"
+      },
+      "formulas": [
+        {
+          "cell": "B6",
+          "formula": "=SUM(B2:B5)",
+          "format": "$#,##0"
+        },
+        {
+          "cell": "C6",
+          "formula": "=SUM(C2:C5)",
+          "format": "#,##0"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "type": "color_scale",
+          "range": "B2:B5",
+          "start_color": "FFE17055",
+          "end_color": "FF00B894"
+        }
+      ],
+      "charts": [
+        {
+          "type": "pie",
+          "title": "Market Share by Region",
+          "data_range": "Regional_Analysis!B2:B5",
+          "categories_range": "Regional_Analysis!A2:A5",
+          "position": "G2"
+        }
+      ]
+    },
+    {
+      "name": "Product_Performance",
+      "type": "data",
+      "headers": ["Product", "Units_Sold", "Revenue", "Avg_Price", "% of Revenue"],
+      "data": [
+        ["Enterprise License", 25, 62500, 2500, 0.53],
+        ["Pro License", 49, 47200, 1200, 0.40],
+        ["Starter License", 15, 7500, 500, 0.06]
+      ],
+      "formats": {
+        "Revenue": "$#,##0",
+        "Avg_Price": "$#,##0",
+        "% of Revenue": "0.0%"
+      },
+      "conditional_formatting": [
+        {
+          "type": "data_bar",
+          "range": "C2:C4",
+          "color": "A29BFE"
+        }
+      ],
+      "charts": [
+        {
+          "type": "bar",
+          "title": "Revenue by Product",
+          "data_range": "Product_Performance!C2:C4",
+          "categories_range": "Product_Performance!A2:A4",
+          "position": "G2"
+        }
+      ]
+    },
+    {
+      "name": "Leaderboard",
+      "type": "data",
+      "headers": ["Rank", "Salesperson", "Total_Sales", "Deals_Closed", "Avg_Deal", "Commission"],
+      "data": [
+        [1, "Michael Brown", 44500, 3, 14833, 4450],
+        [2, "Sarah Chen", 30800, 3, 10267, 3080],
+        [3, "Jennifer Lopez", 21900, 2, 10950, 2190],
+        [4, "David Kim", 19600, 2, 9800, 1960]
+      ],
+      "formats": {
+        "Total_Sales": "$#,##0",
+        "Avg_Deal": "$#,##0",
+        "Commission": "$#,##0"
+      },
+      "styling": {
+        "table_style": true,
+        "auto_width": true
+      },
+      "conditional_formatting": [
+        {
+          "type": "color_scale",
+          "range": "C2:C5",
+          "start_color": "FFFFFF",
+          "mid_color": "FFA29BFE",
+          "end_color": "FF6C5CE7"
+        }
+      ]
+    }
+  ]
+}
