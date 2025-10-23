@@ -1,0 +1,76 @@
+{
+  "title": "Quarterly Business Review",
+  "subtitle": "Q4 2024 Performance & 2025 Strategy",
+  "theme": "corporate_blue",
+  "global_transition": "fade",
+  "global_animation": "fade",
+  "output_path": "Q4_Business_Review.pptx",
+  "slides": [
+    {
+      "type": "title",
+      "title": "Quarterly Business Review",
+      "subtitle": "Q4 2024 Performance & 2025 Strategy",
+      "background": null
+    },
+    {
+      "type": "section",
+      "title": "Executive Summary"
+    },
+    {
+      "type": "content",
+      "title": "Q4 2024 Highlights",
+      "bullets": [
+        "Revenue grew 25% YoY to $45M",
+        "Expanded to 3 new markets",
+        "Launched 5 major product features",
+        "Customer satisfaction reached 92%",
+        "Team grew from 120 to 156 employees"
+      ],
+      "transition": "push"
+    },
+    {
+      "type": "two_column",
+      "title": "Strengths & Opportunities",
+      "left_content": [
+        "STRENGTHS:",
+        "• Strong product-market fit",
+        "• High customer retention (95%)",
+        "• Efficient operations",
+        "• Talented team"
+      ],
+      "right_content": [
+        "OPPORTUNITIES:",
+        "• Enterprise market expansion",
+        "• International growth",
+        "• Strategic partnerships",
+        "• Product line extension"
+      ]
+    },
+    {
+      "type": "comparison",
+      "title": "2024 vs 2025 Goals",
+      "left_title": "2024 Results\n$45M Revenue\n1,200 Customers\n3 Markets",
+      "right_title": "2025 Targets\n$75M Revenue\n2,500 Customers\n7 Markets"
+    },
+    {
+      "type": "timeline",
+      "title": "2025 Strategic Timeline",
+      "events": [
+        "Q1\nProduct Launch",
+        "Q2\nMarket Expansion",
+        "Q3\nPartnership",
+        "Q4\nGlobal Scale"
+      ]
+    },
+    {
+      "type": "content",
+      "title": "Next Steps",
+      "bullets": [
+        "Approve 2025 budget and hiring plan",
+        "Finalize product roadmap priorities",
+        "Execute international expansion strategy",
+        "Schedule monthly progress reviews"
+      ]
+    }
+  ]
+}

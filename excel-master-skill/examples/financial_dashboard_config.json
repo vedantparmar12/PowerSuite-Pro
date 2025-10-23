@@ -1,0 +1,202 @@
+{
+  "theme": "financial_green",
+  "output_path": "Financial_Dashboard_2024.xlsx",
+  "sheets": [
+    {
+      "name": "Dashboard",
+      "type": "dashboard",
+      "title": "Q4 2024 Financial Dashboard",
+      "kpis": [
+        {
+          "name": "Total Revenue",
+          "value": 1250000,
+          "format": "$#,##0",
+          "change": 0.15
+        },
+        {
+          "name": "Net Profit",
+          "value": 350000,
+          "format": "$#,##0",
+          "change": 0.22
+        },
+        {
+          "name": "Profit Margin",
+          "value": 0.28,
+          "format": "0.0%",
+          "change": 0.05
+        },
+        {
+          "name": "Active Customers",
+          "value": 1847,
+          "format": "#,##0",
+          "change": 0.12
+        }
+      ],
+      "charts": [
+        {
+          "type": "line",
+          "title": "Monthly Revenue Trend",
+          "data_range": "Revenue!B2:B13",
+          "categories_range": "Revenue!A2:A13",
+          "x_axis": "Month",
+          "y_axis": "Revenue ($)",
+          "style": 12
+        },
+        {
+          "type": "bar",
+          "title": "Expenses by Category",
+          "data_range": "Expenses!B2:B7",
+          "categories_range": "Expenses!A2:A7",
+          "x_axis": "Category",
+          "y_axis": "Amount ($)",
+          "style": 10
+        }
+      ]
+    },
+    {
+      "name": "Revenue",
+      "type": "data",
+      "headers": ["Month", "Revenue", "Target", "Variance", "% of Target"],
+      "data": [
+        ["Jan 2024", 95000, 90000, 5000, 1.056],
+        ["Feb 2024", 98000, 92000, 6000, 1.065],
+        ["Mar 2024", 102000, 95000, 7000, 1.074],
+        ["Apr 2024", 105000, 95000, 10000, 1.105],
+        ["May 2024", 110000, 100000, 10000, 1.100],
+        ["Jun 2024", 108000, 100000, 8000, 1.080],
+        ["Jul 2024", 112000, 105000, 7000, 1.067],
+        ["Aug 2024", 115000, 105000, 10000, 1.095],
+        ["Sep 2024", 118000, 110000, 8000, 1.073],
+        ["Oct 2024", 121000, 110000, 11000, 1.100],
+        ["Nov 2024", 125000, 115000, 10000, 1.087],
+        ["Dec 2024", 141000, 120000, 21000, 1.175]
+      ],
+      "formats": {
+        "Revenue": "$#,##0",
+        "Target": "$#,##0",
+        "Variance": "$#,##0",
+        "% of Target": "0.0%"
+      },
+      "formulas": [
+        {
+          "cell": "B14",
+          "formula": "=SUM(B2:B13)",
+          "format": "$#,##0"
+        },
+        {
+          "cell": "C14",
+          "formula": "=SUM(C2:C13)",
+          "format": "$#,##0"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "type": "data_bar",
+          "range": "B2:B13",
+          "color": "28A745"
+        },
+        {
+          "type": "color_scale",
+          "range": "E2:E13",
+          "start_color": "FFE17055",
+          "mid_color": "FFFECA57",
+          "end_color": "FF00B894"
+        }
+      ],
+      "charts": [
+        {
+          "type": "line",
+          "title": "Revenue vs Target",
+          "data_range": "Revenue!B1:C13",
+          "categories_range": "Revenue!A2:A13",
+          "position": "G2",
+          "width": 12,
+          "height": 8
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "type": "data",
+      "headers": ["Category", "Amount", "Budget", "Variance", "% of Budget"],
+      "data": [
+        ["Salaries", 450000, 480000, 30000, 0.9375],
+        ["Marketing", 180000, 200000, 20000, 0.9000],
+        ["Operations", 120000, 115000, -5000, 1.0435],
+        ["Technology", 95000, 90000, -5000, 1.0556],
+        ["Office", 45000, 50000, 5000, 0.9000],
+        ["Travel", 25000, 30000, 5000, 0.8333]
+      ],
+      "formats": {
+        "Amount": "$#,##0",
+        "Budget": "$#,##0",
+        "Variance": "$#,##0",
+        "% of Budget": "0.0%"
+      },
+      "formulas": [
+        {
+          "cell": "B8",
+          "formula": "=SUM(B2:B7)",
+          "format": "$#,##0"
+        },
+        {
+          "cell": "C8",
+          "formula": "=SUM(C2:C7)",
+          "format": "$#,##0"
+        }
+      ],
+      "conditional_formatting": [
+        {
+          "type": "cell_value",
+          "range": "D2:D7",
+          "operator": "lessThan",
+          "value": 0,
+          "color": "FFCCCC"
+        }
+      ]
+    },
+    {
+      "name": "Cash Flow",
+      "type": "data",
+      "headers": ["Month", "Inflow", "Outflow", "Net Cash Flow", "Cumulative"],
+      "data": [
+        ["Jan 2024", 95000, 75000, 20000, 20000],
+        ["Feb 2024", 98000, 78000, 20000, 40000],
+        ["Mar 2024", 102000, 81000, 21000, 61000],
+        ["Apr 2024", 105000, 83000, 22000, 83000],
+        ["May 2024", 110000, 85000, 25000, 108000],
+        ["Jun 2024", 108000, 84000, 24000, 132000],
+        ["Jul 2024", 112000, 86000, 26000, 158000],
+        ["Aug 2024", 115000, 88000, 27000, 185000],
+        ["Sep 2024", 118000, 90000, 28000, 213000],
+        ["Oct 2024", 121000, 92000, 29000, 242000],
+        ["Nov 2024", 125000, 94000, 31000, 273000],
+        ["Dec 2024", 141000, 96000, 45000, 318000]
+      ],
+      "formats": {
+        "Inflow": "$#,##0",
+        "Outflow": "$#,##0",
+        "Net Cash Flow": "$#,##0",
+        "Cumulative": "$#,##0"
+      },
+      "conditional_formatting": [
+        {
+          "type": "color_scale",
+          "range": "D2:D13",
+          "start_color": "FFFF0000",
+          "mid_color": "FFFFFF00",
+          "end_color": "FF00FF00"
+        }
+      ],
+      "charts": [
+        {
+          "type": "area",
+          "title": "Cash Flow Trend",
+          "data_range": "Cash Flow!D1:E13",
+          "categories_range": "Cash Flow!A2:A13",
+          "position": "G2"
+        }
+      ]
+    }
+  ]
+}

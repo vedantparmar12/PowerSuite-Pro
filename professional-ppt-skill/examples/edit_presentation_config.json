@@ -1,0 +1,36 @@
+{
+  "edit_file": "existing_presentation.pptx",
+  "change_theme": "modern_minimal",
+  "update_slides": {
+    "0": {
+      "title": "Updated Title",
+      "subtitle": "With New Subtitle"
+    },
+    "2": {
+      "title": "Modified Content Slide",
+      "bullets": [
+        "Updated bullet point 1",
+        "Updated bullet point 2",
+        "New bullet point 3"
+      ]
+    }
+  },
+  "add_slides": [
+    {
+      "type": "content",
+      "title": "New Slide Added",
+      "bullets": [
+        "This slide was added after creation",
+        "You can add any slide type",
+        "Full customization available"
+      ]
+    },
+    {
+      "type": "section",
+      "title": "New Section"
+    }
+  ],
+  "delete_slides": [5, 7],
+  "reorder_slides": [0, 1, 3, 2, 4, 6, 8, 9, 10],
+  "output_path": "edited_presentation.pptx"
+}
